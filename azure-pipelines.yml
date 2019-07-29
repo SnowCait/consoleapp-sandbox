@@ -20,3 +20,7 @@ steps:
     solution: '**/*.sln'
     platform: 'Any CPU'
     configuration: 'Release'
+- script: |
+    ls -la $(Build.SourcesDirectory)
+    ls -la $(Build.BinariesDirectory)
+    ls -la $(Build.ArtifactStagingDirectory)
