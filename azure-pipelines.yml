@@ -10,9 +10,13 @@ pool:
   vmImage: 'windows-2019'
 
 steps:
+- task: NuGetCommand@2
+  inputs:
+    command: 'restore'
+    restoreSolution: '**/*.sln'
+    feedsToUse: 'select'
 - task: MSBuild@1
   inputs:
     solution: '**/*.sln'
     platform: 'Any CPU'
     configuration: 'Release'
-    restoreNugetPackages: true
