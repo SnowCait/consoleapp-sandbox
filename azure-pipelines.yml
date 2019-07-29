@@ -24,7 +24,12 @@ steps:
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)\ConsoleApp1\bin\Release'
     Contents: '**'
-    TargetFolder: '$(Build.BinariesDirectory)'
+    TargetFolder: '$(Build.BinariesDirectory)\App1'
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(Build.SourcesDirectory)\ConsoleApp2\bin\Release'
+    Contents: '**'
+    TargetFolder: '$(Build.BinariesDirectory)\App2'
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(Build.BinariesDirectory)'
