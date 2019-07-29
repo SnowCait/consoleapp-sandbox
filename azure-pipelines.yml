@@ -17,3 +17,13 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+- task:
+  inputs:
+    gitHubConnection: SnowCait
+    repositoryName: consoleapp-sandbox
+    action: create
+    target: $(Build.SourceVersion)
+    tagSource: auto
+    tag: auto
+    releaseNotesSource: input
