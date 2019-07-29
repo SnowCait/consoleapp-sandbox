@@ -10,6 +10,6 @@ pool:
   vmImage: 'windows-2019'
 
 steps:
-- task: DotNetCoreCLI@2
+- task: MSBuild@1
   inputs:
-    command: 'build'
+    solution: '**/*.sln'
