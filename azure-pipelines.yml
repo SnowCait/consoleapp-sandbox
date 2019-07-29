@@ -26,7 +26,7 @@ steps:
 
 - task: GitHubRelease@0
   inputs:
-    gitHubConnection: SnowCait
+    gitHubConnection: azureSubscription
     repositoryName: consoleapp-sandbox
     action: create
     target: $(Build.SourceVersion)
