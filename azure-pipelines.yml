@@ -18,7 +18,7 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-- task:
+- task: GitHubRelease@0
   inputs:
     gitHubConnection: SnowCait
     repositoryName: consoleapp-sandbox
