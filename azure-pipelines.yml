@@ -21,8 +21,7 @@ steps:
     platform: 'Any CPU'
     configuration: 'Release'
 - script: |
-    pwd
-    ls -la
+    ls -la ConsoleApp1
     echo $(Build.SourcesDirectory)
     ls -la $(Build.SourcesDirectory)
     echo $(Build.BinariesDirectory)
