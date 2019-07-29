@@ -43,8 +43,11 @@ steps:
     repositoryName: '$(Build.Repository.Name)'
     action: 'create'
     target: '$(Build.SourceVersion)'
-    tagSource: 'auto'
+    tagSource: 'manual'
+    tag: 'v1.$(Build.BuildId)'
+
 - script: |
+    echo $(Build.Repository.Name)
     ls -la ConsoleApp1
     echo $(Build.SourcesDirectory)
     ls -la $(Build.SourcesDirectory)
