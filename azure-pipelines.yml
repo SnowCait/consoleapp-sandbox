@@ -20,6 +20,11 @@ steps:
     solution: '**/*.sln'
     platform: 'Any CPU'
     configuration: 'Release'
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(Build.SourcesDirectory)\ConsoleApp1\bin\Release'
+    Contents: '**'
+    TargetFolder: '$(Build.BinariesDirectory)'
 - script: |
     ls -la ConsoleApp1
     echo $(Build.SourcesDirectory)
