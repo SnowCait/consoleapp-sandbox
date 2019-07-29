@@ -21,6 +21,11 @@ steps:
     platform: 'Any CPU'
     configuration: 'Release'
 - script: |
+    pwd
+    ls -la
+    echo $(Build.SourcesDirectory)
     ls -la $(Build.SourcesDirectory)
+    echo $(Build.BinariesDirectory)
     ls -la $(Build.BinariesDirectory)
+    echo $(Build.ArtifactStagingDirectory)
     ls -la $(Build.ArtifactStagingDirectory)
